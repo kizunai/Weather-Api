@@ -1,0 +1,39 @@
+spring:
+  profiles:
+    active: test
+
+---
+spring:
+  profiles: dev
+  datasource:
+    username: hyy
+    password: hyydbb
+    url: jdbc:mysql://u292750c07.qicp.vip:44831/previous?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+
+#showSql
+logging:
+  level:
+    com:
+      example:
+        mapper : debug
+
+server:
+  port: 8088
+---
+spring:
+  profiles: test
+  datasource:
+    username: root
+    password: zaq12wsx
+    url: jdbc:mysql://localhost:3306/previous?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+
+server:
+  port: 8088
