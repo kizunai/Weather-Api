@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: test
+    active: online
 
 ---
 spring:
@@ -37,3 +37,20 @@ mybatis:
 
 server:
   port: 8088
+
+
+---
+spring:
+  profiles: online
+  datasource:
+    username: hyydbb
+    password: hyydbb
+    url: jdbc:mysql://118.178.254.253:3306/WeatherForecast?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+
+server:
+  port: 8088
+

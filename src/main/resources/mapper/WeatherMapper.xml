@@ -1,0 +1,19 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.WeatherMapper">
+    <resultMap id="BaseResultMap" type="com.example.demo.bean.Weather.WeatherBean">
+        <result column="id" jdbcType="INTEGER" property="id" />
+        <result column="city" jdbcType="VARCHAR" property="city" />
+        <result column="day_1" jdbcType="VARCHAR" property="day_1" />
+        <result column="day_2" jdbcType="VARCHAR" property="day_2" />
+        <result column="day_3" jdbcType="VARCHAR" property="day_3" />
+        <result column="day_4" jdbcType="VARCHAR" property="day_4" />
+        <result column="day_5" jdbcType="VARCHAR" property="day_5" />
+        <result column="day_6" jdbcType="VARCHAR" property="day_6" />
+        <result column="day_7" jdbcType="VARCHAR" property="day_7" />
+    </resultMap>
+
+    <select id = "selectWeatherData" parameterType="java.lang.String" resultType="com.example.demo.bean.Weather.WeatherBean">
+        select * from forecast7days where city = #{city}
+    </select>
+</mapper>

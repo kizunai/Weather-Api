@@ -6,8 +6,8 @@ spring:
 spring:
   profiles: dev
   datasource:
-    username: hyy
-    password: hyydbb
+    username: root
+    password: root
     url: jdbc:mysql://u292750c07.qicp.vip:44831/previous?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
 
@@ -28,7 +28,7 @@ spring:
   profiles: test
   datasource:
     username: root
-    password: zaq12wsx
+    password: root
     url: jdbc:mysql://localhost:3306/previous?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
 
@@ -43,8 +43,8 @@ server:
 spring:
   profiles: online
   datasource:
-    username: hyydbb
-    password: hyydbb
+    username: root
+    password: root
     url: jdbc:mysql://localhost:3306/WeatherForecast?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
 

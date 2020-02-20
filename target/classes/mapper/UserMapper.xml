@@ -11,6 +11,6 @@
     </resultMap>
 
     <select id = "selectUserByUsername" parameterType="java.lang.String" resultType="com.example.demo.bean.UserBean">
-        select * from DdnsUser where username = #{usernamee}
+        select * from previous.ddnsuser where username = #{usernamee}
     </select>
 </mapper>
